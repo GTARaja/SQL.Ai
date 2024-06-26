@@ -12,8 +12,6 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 
-GOOGLE_API_KEY='AIzaSyD0W_tAHffQRKH5_sZMa_Tuy0NJfrsDK8E'
-
 genai.configure(api_key=GOOGLE_API_KEY)
 for m in genai.list_models():
   if 'generateContent' in m.supported_generation_methods:
