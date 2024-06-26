@@ -49,7 +49,7 @@ while(True):
 
     prompt = PromptTemplate(template = prompt_template, input_variables = ["context", "question"])
     model = ChatGoogleGenerativeAI(model="gemini-pro",
-                             temperature=0.3,apikey='AIzaSyD0W_tAHffQRKH5_sZMa_Tuy0NJfrsDK8E')
+                             temperature=0.3,apikey='abc')
     chain = load_qa_chain(model, chain_type="stuff", prompt=prompt)
     response = chain({"input_documents":docs, "question": question}, return_only_outputs=True)
     print(response['output_text'])
